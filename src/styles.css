@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media (max-width:800px) {
+  /* For tablets: */
+  .table {
+    margin: 10px;
+    width: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  /* For mobile phones: */
+  .table {
+    margin: 0px;
+    width: 100%;
+  }
+}
+
+div.card-header {
+  font-size: large;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+
+body {
+  background-color: #0f8ec7;
+  margin: 10px;
+}
+
+a {
+  color: #0f8ec7;
+  text-decoration: none;
+}

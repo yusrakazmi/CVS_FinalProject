@@ -1,0 +1,53 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="containerDiv">
+  <table>
+    <thead>
+      <tr>
+        <th rowspan="2"
+            (click)="sort('accountNumber')">
+          Account Number
+          <i class="fa"
+             [ngClass]="{
+            'fa-sort-asc': (column === 'accountNumber' && isAsc), 
+            'fa-sort-desc': (column === 'accountNumber' && !isAsc) }"
+             aria-hidden="true"> </i>
+        </th>
+        <th class="NoBorder"
+            (click)="sort('availableCash')">
+          Available Cash
+          <i class="fa"
+             [ngClass]="{'fa-sort-asc': (column === 'availableCash' && isAsc), 
+            'fa-sort-desc': (column === 'availableCash' && !isAsc) }"
+             aria-hidden="true"> </i>
+        </th>
+      </tr>
+      <tr>
+        <th class="neutral">Today's Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let account of accounts'>
+        <td class="accountNumberText">{{account.accountNumber}}</td>
+        <td>
+      <tr class="availableCashText">{{account.availableCash | currency:'USD':'symbol':'1.2-2'}}</tr>
+      <tr [ngClass]="{'neutral': account.percentageChange === 0,
+                 'increase': account.percentageChange > 0, 
+                 'decrease': account.percentageChange < 0}">
+        {{account.percentageChange | percent:'1.2-2' }} / {{account.todaysChange | currency:'USD':'symbol':'1.2-2' }}
+      </tr>
+      </td>
+      </tr>
+      <tr>
+        <td *ngIf="recordsExist"
+            colspan="2"
+            class="loadMoreText"><a href="#"
+             (click)="loadMore()">Load More</a> </td>
+      </tr>
+    </tbody>
+  </table>
+  <div *ngIf="!recordsExist"
+       class="alert">
+    <strong>No new records to load </strong>
+  </div>
+</div>

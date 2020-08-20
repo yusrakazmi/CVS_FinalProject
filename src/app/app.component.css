@@ -1,0 +1,75 @@
+@import "~font-awesome/css/font-awesome.css";
+.nav-link {
+  font-size: large;
+}
+
+.containerDiv {
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  border-collapse: collapse;
+  width: 75%;
+  background-color: white;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-color: #C0C0C0;
+}
+
+.accountNumberText {
+  color: #0f8ec7;
+  font-weight: bold;
+}
+
+.availableCashText {
+  color: black;
+  font-weight: bold;
+}
+
+.NoBorder {
+  border: none;
+}
+
+.neutral {
+  color: gray;
+  font-size: small;
+}
+
+.decrease {
+  color: #ff0000;
+  font-size: small;
+}
+
+.increase {
+  color: #03970a;
+  font-size: small;
+}
+
+.increase::before {
+  content: '+';
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.loadMoreText {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.alert {
+  color: white;
+  font-style: italic;
+  text-align: center;
+  font-weight: bold;
+}

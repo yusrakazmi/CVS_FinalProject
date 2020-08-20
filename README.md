@@ -1,10 +1,9 @@
-# CVS Final Project
-
+# CVS Project
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
-## Instructions
+## Requirements
+Node.js v9.9.0 or greater is required.
 
-Clone the Repo Project_CVS.
-Run `npm-install` from the package.json location
+## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. 
 
